@@ -39,8 +39,9 @@ tmux
 Status bar 예시:
 
 ```
-Inner: [WING ▸ myhost:session][M:On ] 0:zsh 1:vim*    [~/wrkp][title][2026-03-01 14:30]
-Base:  [BASE ▸ myhost:session][M:Off] 0:zsh*           [~/wrkp][title][2026-03-01 14:30]
+Inner: [WING ▸ myhost:session][M:On ]      0:zsh 1:vim*    [~/wrkp][title][2026-03-01 14:30]
+Base:  [BASE ▸ myhost:session][M:Off]      0:zsh*           [~/wrkp][title][2026-03-01 14:30]
+Sync:  [WING ▸ myhost:session][M:On ] SYNC 0:zsh 1:vim*    [~/wrkp][title][2026-03-01 14:30]
 ```
 
 ## 키바인딩
@@ -51,7 +52,8 @@ Base:  [BASE ▸ myhost:session][M:Off] 0:zsh*           [~/wrkp][title][2026-03
 |---|---|
 | `prefix + m` | 마우스 모드 토글 |
 | `prefix + h/j/k/l` | vim 스타일 pane 이동 |
-| `prefix + s` | synchronize-panes 토글 |
+| `prefix + H/J/K/L` | vim 스타일 pane 리사이즈 (반복 가능) |
+| `prefix + s` | synchronize-panes 토글 (SYNC 표시) |
 | `prefix + Space` | 다음 윈도우 |
 | `prefix + BSpace` | 이전 윈도우 |
 | `prefix + "` | 수평 분할 (현재 경로) |
@@ -68,6 +70,7 @@ Base:  [BASE ▸ myhost:session][M:Off] 0:zsh*           [~/wrkp][title][2026-03
 | `v` | 비주얼 선택 시작 |
 | `y` | 선택 영역 복사 |
 | `yy` | 현재 줄 전체 복사 |
+| `Escape` | copy-mode 종료 |
 
 복사된 텍스트는 OSC52를 통해 시스템 클립보드로 자동 전달된다 (SSH 원격 환경 포함).
 
