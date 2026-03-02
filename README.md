@@ -1,7 +1,5 @@
 # 2-Layer tmux Configuration
 
-[Gist](https://gist.github.com/qgp9/bebb24c75b3769804f5ac56d8eeb158a)
-
 2-layer tmux 구조로, 외부(base)와 내부(inner) tmux를 중첩 실행하여 prefix 충돌 없이 독립적으로 관리한다.
 
 ## 파일 구조
@@ -53,6 +51,13 @@ Sync:  [WING ▸ myhost:session][M:On ] SYNC 0:zsh 1:vim*    [~/wrkp][title][202
 
 ## 키바인딩
 
+### Prefix
+
+| 레이어 | Prefix | 최근 윈도우 | prefix 패스스루 |
+|---|---|---|---|
+| Inner (WING) | `C-a` | `C-a C-a` | `C-a a` |
+| Base (BASE) | `C-q` | `C-q C-q` | `C-q q` |
+
 ### 공통 (common.conf)
 
 | 키 | 동작 |
@@ -87,12 +92,6 @@ Sync:  [WING ▸ myhost:session][M:On ] SYNC 0:zsh 1:vim*    [~/wrkp][title][202
 |---|---|
 | `Alt + Enter` | 우하단 pane에서 분할 |
 | `Alt + 숫자` | 워크스페이스 전환 (tilish) |
-
-### Base 전용
-
-| 키 | 동작 |
-|---|---|
-| `prefix + Tab` | 마지막 윈도우 전환 |
 
 ## 주요 설정
 
